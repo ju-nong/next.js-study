@@ -6,12 +6,13 @@ export default function Home() {
 
     const callCats = async () => {
         const { data } = await axios.get("/api/cat/gif");
-        console.log(data);
 
-        const url = window.URL || window.webkitURL;
-        const blob = new Blob([data], { type: "image/gif" });
+        setSrc("https://cataas.com" + data.url);
 
-        setSrc(url.createObjectURL(blob));
+        // const url = window.URL || window.webkitURL;
+        // const blob = new Blob([data], { type: "image/gif" });
+        // const src2 =;
+        // setSrc( url.createObjectURL(blob));
     };
 
     return (

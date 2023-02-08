@@ -6,9 +6,9 @@ const config = axios.create({
     baseURL: "https://cataas.com/",
     timeout: TIMEOUT * 1000,
     headers: {
-        "Content-Type": "image/gif",
+        "Content-Type": "application/json",
     },
-    responseType: "blob",
+    responseType: "json",
 });
 
 export { config as default };
