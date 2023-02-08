@@ -19,7 +19,7 @@ export default function Home() {
 
     return (
         <>
-            <h1>김이슬 바보</h1>
+            {src.length > 0 && <h1>김이슬 바보</h1>}
             <p>누를 때 마다 생김 (안 나오면 좀 기다리셈)</p>
             <button onClick={callCats}>고양이 생성</button>
             <img src={src} />
