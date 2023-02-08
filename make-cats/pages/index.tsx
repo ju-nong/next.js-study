@@ -25,7 +25,7 @@ export default function Home() {
 
     const callCats = async () => {
         const { data } = await axios.get(
-            "https://cataas.com/cat/gif?json=true",
+            "https://cataas.com/cat/gif?json=true"
         );
 
         setSrc("https://cataas.com" + data.url);
@@ -38,11 +38,11 @@ export default function Home() {
 
     return (
         <>
-            <h1>아리 돌리기</h1>
+            {/* <h1>아리 돌리기</h1>
             <ImageStyled src="ari2.jpg" />
             <p>누를 때 마다 생김 (안 나오면 좀 기다리셈)</p>
             얘를 눌러요 => <button onClick={callCats}>고양이 생성</button>
-            <img src={src} />
+            <img src={src} /> */}
         </>
     );
 }
