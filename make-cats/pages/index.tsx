@@ -5,7 +5,9 @@ export default function Home() {
     const [src, setSrc] = useState("");
 
     const callCats = async () => {
-        const { data } = await axios.get("/api/cat/gif");
+        const { data } = await axios.get(
+            "https://cataas.com/cat/gif?json=true",
+        );
 
         setSrc("https://cataas.com" + data.url);
 
