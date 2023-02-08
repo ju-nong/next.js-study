@@ -17,7 +17,7 @@ const ImageStyled = styled.img`
 
     margin: 5rem;
 
-    animation: spin infinite 3s linear;
+    animation: spin infinite 1.5s linear;
 `;
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
 
     return (
         <>
-            {src.length > 0 ? <h1>김이슬 바보</h1> : <h1>문구 삭제</h1>}
+            <h1>아리 돌리기</h1>
             <ImageStyled src="ari2.jpg" />
             <p>누를 때 마다 생김 (안 나오면 좀 기다리셈)</p>
             <button onClick={callCats}>고양이 생성</button>
