@@ -1,12 +1,13 @@
 import React from "react";
-import Link from "next/link";
+import Layout from "@/components/layout/Layout";
 import { Header } from "@/components/semantic/Header";
 
 function index() {
     return (
-        <div>
+        <Layout>
+            <p>Hello World</p>
             <Header />
-        </div>
+        </Layout>
     );
 }
 

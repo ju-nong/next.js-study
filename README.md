@@ -36,3 +36,9 @@ public
 ```
 
 와 정말 간편하다
+
+## styled-components 적용
+
+참조: [Next.js + styled-components](https://taenami.tistory.com/69)
+
+근데 여기 프로젝트에서는, 연습해볼겸 emotion 채택
