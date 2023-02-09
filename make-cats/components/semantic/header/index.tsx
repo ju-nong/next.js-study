@@ -1,9 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
+import { colorChange } from "@/styles";
 
 const HeaderStyled = styled.header`
-    background-color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+
+    & > a {
+        color: white;
+        font-weight: bold;
+        text-transform: capitalize;
+
+        ${colorChange("white")}
+    }
 `;
 
 function Header() {
@@ -11,8 +23,10 @@ function Header() {
 
     return (
         <HeaderStyled>
-            {menus.map((menu) => (
-                <Link href={menu}>{menu}</Link>
+            {menus.map((menu, index) => (
+                <Link href={menu} key={index}>
+                    {menu}
+                </Link>
             ))}
         </HeaderStyled>
     );
