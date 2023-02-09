@@ -4,7 +4,7 @@ import { createWrapper } from "next-redux-wrapper";
 
 const makeStore = () =>
     configureStore({
-        reducer: { tagReducer },
+        reducer: { tagsStore: tagReducer },
     });
 
 const wrapper = createWrapper(makeStore);

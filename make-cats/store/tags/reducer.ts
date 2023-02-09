@@ -6,7 +6,7 @@ interface TagsState {
 }
 
 const initialState: TagsState = {
-    tags: ["d하이요"],
+    tags: [],
 };
 
 const TagSlice = createSlice({

@@ -5,7 +5,7 @@ import axios from "axios";
 
 const HomeContainer = styled.main`
     max-width: 700px;
-    height: calc(100vh - 53px);
+    height: 80vh;
     display: flex;
     margin: 0 auto;
     align-items: center;
