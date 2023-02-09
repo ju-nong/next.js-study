@@ -1,31 +1,41 @@
 import React, { useEffect } from "react";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { AppState } from "@/store";
-import { useQuery } from "react-query";
-import { tagActions } from "@/store/tags/reducer";
+import { useMutation, useQuery, useQueryClient } from "react-query";
+import { setTags, tagActions } from "@/store/tags/reducer";
+import { Tags } from "@/store/tags/types";
 
-async function fetchData() {
-    const { data } = await axios.get("https://cataas.com/api/tags");
-
-    return data;
+async function fetchData(): Promise<AxiosResponse<Tags>> {
+  return axios.get("https://cataas.com/api/tags");
 }
 
+const queryKey = {
+  getTags: "tagList",
+};
+
+const useGetTags = () => {
+  return useQuery([queryKey.getTags, "asdf", "zxcv"], fetchData);
+};
+
 function Tag() {
-    const state = useSelector((state: AppState) => state.tagsStore);
-    const dispatch = useDispatch();
+  const { tags } = useSelector((state: AppState) => state.tagsStore);
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        const { data } = useQuery("getTags", fetchData);
+  const queryClient = useQueryClient();
+  const { data: tagsResponse } = useGetTags();
 
-        if (data?.length) {
-            dispatch(tagActions.getTags(data));
-        }
+  const tagsData = tagsResponse?.data;
+  console.log(tagsData);
 
-        console.log(state);
-    }, []);
+  useEffect(() => {
+    if (tagsData) {
+      dispatch(setTags(tagsData));
+    }
+  }, [dispatch, tagsData]);
 
-    return <div>asdfasdf</div>;
+  console.log(tags);
+  return <div>asdfasdf</div>;
 }
 
 export { Tag as default };
