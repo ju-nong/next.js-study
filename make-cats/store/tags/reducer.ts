@@ -1,25 +1,28 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Tags } from "./types";
 
 interface TagsState {
-    tags: Tags;
+  tags: Tags;
 }
 
 const initialState: TagsState = {
-    tags: [],
+  tags: [],
 };
 
 const TagSlice = createSlice({
-    name: "tags",
-    initialState,
-    reducers: {
-        getTags(state, { payload }) {
-            state.tags = payload;
-        },
+  name: "tags",
+  initialState,
+  reducers: {
+    setTags(state, { payload }: PayloadAction<Tags>) {
+      state.tags = payload;
     },
+  },
 });
 
 const { actions: tagActions, reducer: tagReducer } = TagSlice;
 
 export { tagActions, tagReducer };
 export type { TagsState };
+
+export const { setTags } = TagSlice.actions;
+export default TagSlice.reducer;
