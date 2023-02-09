@@ -95,7 +95,7 @@ const ProfileLink = styled.button`
 
 const BASE = "https://cataas.com";
 
-function home() {
+function Home() {
     const [imgSrc, setImgSrc] = useState(
         "https://avatars.githubusercontent.com/u/81794712?v=4",
     );
@@ -150,4 +150,4 @@ function home() {
     );
 }
 
-export { home as default };
+export { Home as default };
