@@ -5,9 +5,10 @@ import axios from "axios";
 
 const HomeContainer = styled.main`
     max-width: 700px;
+    height: calc(100vh - 53px);
     display: flex;
     margin: 0 auto;
-    padding: 10rem 3rem;
+    align-items: center;
     justify-content: center;
 `;
 
