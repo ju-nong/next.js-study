@@ -7,7 +7,7 @@ const HomeContainer = styled.main`
     max-width: 700px;
     display: flex;
     margin: 0 auto;
-    padding: 3rem;
+    padding: 10rem 3rem;
     justify-content: center;
 `;
 
