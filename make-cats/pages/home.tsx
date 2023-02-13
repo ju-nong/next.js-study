@@ -101,34 +101,32 @@ function Home() {
         "https://avatars.githubusercontent.com/u/81794712?v=4",
     );
 
-    const [loading, setLoading] = useState(false);
+    const [load, setLoad] = useState(true);
 
     const handleChangeImg = async () => {
-        if (loading) {
+        if (!load) {
             return;
         }
 
-        setLoading((loading) => !loading);
+        setLoad(false);
 
         const {
             data: { url },
         } = await axios.get(`${BASE}/cat?json=true`);
 
         setImgSrc(`${BASE}${url}`);
-
-        setTimeout(() => {
-            setLoading((loading) => !loading);
-        }, 2000);
     };
 
     const handleLink = () => {
         window.open("https://github.com/ju-nong");
     };
 
+    const onLoad = () => setLoad(true);
+
     return (
         <HomeContainer>
             <ProfileContainer>
-                <div className={`avatar ${loading ? "" : "none"}`}>
+                <div className={`avatar ${load ? "none" : ""}`}>
                     <div className="shimmer-wrapper">
                         <div className="shimmer"></div>
                     </div>
@@ -136,8 +134,9 @@ function Home() {
                 <img
                     src={imgSrc}
                     alt="ju-nong"
-                    className={`avatar ${loading ? "none" : ""}`}
+                    className={`avatar ${load ? "" : "none"}`}
                     onClick={handleChangeImg}
+                    onLoad={onLoad}
                 />
                 <NamesContainer onClick={handleChangeImg}>
                     <h2>leeJunyong</h2>

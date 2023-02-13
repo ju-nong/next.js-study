@@ -14,7 +14,7 @@ function App({ Component, ...pageProps }: AppProps) {
     return (
         <QueryClientProvider client={queryClient}>
             <Provider store={store}>
-                <Component {...props.pageProps} />;
+                <Component {...props.pageProps} />
             </Provider>
         </QueryClientProvider>
     );
