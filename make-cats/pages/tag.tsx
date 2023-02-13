@@ -6,6 +6,8 @@ import { useQuery } from "react-query";
 import { setTags } from "@/store/tags/reducer";
 import { Tags } from "@/store/tags/types";
 import { TagButton } from "@/components/TagButton";
+import Flicking from "@egjs/react-flicking";
+import { Fade } from "@egjs/flicking-plugins";
 import styled from "@emotion/styled";
 
 const fetchData = async (): Promise<AxiosResponse<Tags>> =>
@@ -26,7 +28,7 @@ const TagList = styled.ul`
     max-width: 500px;
     max-height: 105px;
     overflow-y: scroll;
-    margin: 30px 0px;
+    margin: 30px 0px 60px 0px;
 
     & > li {
         display: inline-block;
@@ -38,14 +40,25 @@ const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     max-width: 90vw;
-    height: 400px;
+    height: 30vh;
     margin-bottom: 30px;
+    overflow-x: hidden;
+
+    & > .flicking-viewport {
+        height: 100%;
+    }
+    & > .flicking-viewport > .flicking-camera {
+        cursor: pointer;
+        height: 100%;
+    }
 `;
 
 const ImageStyled = styled.img`
     height: 100%;
+    pointer-events: none;
+    margin-right: 1rem;
+    border-radius: 3rem;
 `;
 
 const Loading = styled.div`
@@ -86,16 +99,41 @@ const Loading = styled.div`
     }
 `;
 
+const BASE = "https://cataas.com";
+
 function Tag() {
+    const plugins = [new Fade("", 1)];
+
     const { tags } = useSelector((state: AppState) => state.tagsStore);
     const dispatch = useDispatch();
 
     const { data: tagsResponse } = useGetTags();
-
     const tagsData = tagsResponse?.data;
 
     const [nowTag, setNowTag] = useState("");
     const [load, setLoad] = useState(true);
+
+    const [links, setLinks] = useState([]);
+
+    const handleCats = async () => {
+        const { data } = await axios.get(`${BASE}/api/cats?tags=${nowTag}`);
+
+        setLinks(data);
+    };
+
+    const handleChangeTag = (event: React.ChangeEvent<HTMLInputElement>) => {
+        if (event.target.checked) {
+            setNowTag(`${event.target.value}`);
+        } else {
+            setNowTag("");
+        }
+
+        setLoad(false);
+    };
+
+    const onLoad = () => {
+        setLoad(true);
+    };
 
     useEffect(() => {
         if (tagsData) {
@@ -107,21 +145,11 @@ function Tag() {
                 ),
             );
         }
-    }, [dispatch, tagsData]);
 
-    const handleChangeTag = (event: React.ChangeEvent<HTMLInputElement>) => {
-        if (event.target.checked) {
-            setNowTag(`/${event.target.value}`);
-        } else {
-            setNowTag("");
+        if (nowTag != "") {
+            handleCats();
         }
-
-        setLoad(false);
-    };
-
-    const onLoad = () => {
-        setLoad(true);
-    };
+    }, [dispatch, tagsData, nowTag]);
 
     return (
         <TagContainer>
@@ -139,11 +167,17 @@ function Tag() {
                 )}
             </TagList>
             <ImageContainer>
-                <ImageStyled
-                    src={`https://cataas.com/cat${nowTag}`}
-                    alt="cat"
-                    onLoad={onLoad}
-                />
+                <Flicking plugins={plugins}>
+                    {links.map((link) => (
+                        <ImageStyled
+                            className="flicking-panel"
+                            key={link._id}
+                            src={`${BASE}/cat/${link._id}`}
+                            alt="cat"
+                            onLoad={onLoad}
+                        />
+                    ))}
+                </Flicking>
                 {load || <Loading />}
             </ImageContainer>
         </TagContainer>
