@@ -6,8 +6,10 @@ import { useQuery } from "react-query";
 import { setTags } from "@/store/tags/reducer";
 import { Tags } from "@/store/tags/types";
 import { TagButton } from "@/components/TagButton";
-import Flicking from "@egjs/react-flicking";
+import Flicking, from "@egjs/react-flicking";
 import { Fade } from "@egjs/flicking-plugins";
+import "@egjs/flicking-plugins/dist/flicking-plugins.css";
+
 import styled from "@emotion/styled";
 
 const fetchData = async (): Promise<AxiosResponse<Tags>> =>
@@ -41,6 +43,7 @@ const ImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     max-width: 90vw;
+    min-width: 200px;
     height: 30vh;
     margin-bottom: 30px;
     overflow-x: hidden;
@@ -52,6 +55,7 @@ const ImageContainer = styled.div`
         cursor: pointer;
         height: 100%;
     }
+
 `;
 
 const ImageStyled = styled.img`
@@ -167,17 +171,25 @@ function Tag() {
                 )}
             </TagList>
             <ImageContainer>
-                <Flicking plugins={plugins}>
-                    {links.map((link) => (
-                        <ImageStyled
-                            className="flicking-panel"
-                            key={link._id}
-                            src={`${BASE}/cat/${link._id}`}
-                            alt="cat"
-                            onLoad={onLoad}
-                        />
-                    ))}
-                </Flicking>
+                {links.length > 0 ? (
+                    <Flicking plugins={plugins}>
+                        {links.map((link) => (
+                            <ImageStyled
+                                className="flicking-panel"
+                                key={link["_id"]}
+                                src={`${BASE}/cat/${link["_id"]}`}
+                                alt="cat"
+                                onLoad={onLoad}
+                            />
+                        ))}
+                    </Flicking>
+                ) : (
+                    <ImageStyled
+                        src="https://cataas.com/cat"
+                        alt="cat"
+                        onLoad={onLoad}
+                    />
+                )}
                 {load || <Loading />}
             </ImageContainer>
         </TagContainer>
