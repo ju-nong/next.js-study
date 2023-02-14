@@ -6,7 +6,7 @@ import { useQuery } from "react-query";
 import { setTags } from "@/store/tags/reducer";
 import { Tags } from "@/store/tags/types";
 import { TagButton } from "@/components/TagButton";
-import Flicking, from "@egjs/react-flicking";
+import Flicking from "@egjs/react-flicking";
 import { Fade } from "@egjs/flicking-plugins";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 
@@ -55,7 +55,6 @@ const ImageContainer = styled.div`
         cursor: pointer;
         height: 100%;
     }
-
 `;
 
 const ImageStyled = styled.img`
