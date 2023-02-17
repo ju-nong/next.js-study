@@ -119,9 +119,18 @@ function Tag() {
     const [links, setLinks] = useState([]);
 
     const handleCats = async () => {
-        const { data } = await axios.get(`${BASE}/api/cats?tags=${nowTag}`);
+        try {
+            const { data } = await axios.get(
+                `${BASE}/api/cats?tags=${nowTag}`,
+                {
+                    timeout: 3000,
+                },
+            );
 
-        setLinks(data);
+            setLinks(data);
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     const handleChangeTag = (event: React.ChangeEvent<HTMLInputElement>) => {
