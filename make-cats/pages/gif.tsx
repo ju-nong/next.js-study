@@ -40,11 +40,11 @@ function Gif() {
     const loadingElement = useRef(null);
     const observer = useRef<IntersectionObserver | null>(null);
 
-    const [gifCount, setGifCount] = useState(7);
+    const [gifCount, setGifCount] = useState(8);
 
     const gifs = useMemo(
         () => new Array(gifCount).fill(null).map((_, index) => index),
-        [gifCount]
+        [gifCount],
     );
 
     useEffect(() => {
@@ -55,7 +55,7 @@ function Gif() {
                         setGifCount((count) => count + 8);
                     }
                 },
-                { threshold: 0.5 }
+                { threshold: 0.5 },
             );
 
             observer.current.observe(loadingElement.current);
