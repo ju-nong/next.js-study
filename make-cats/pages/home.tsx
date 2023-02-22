@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { bgChange, colorChange } from "@/styles";
 import axios from "axios";
-import { Darkmode } from "@/components/Darkmode";
 
 const HomeContainer = styled.main`
     max-width: 700px;
@@ -126,7 +125,6 @@ function Home() {
 
     return (
         <HomeContainer>
-            <Darkmode />
             <ProfileContainer>
                 <div className={`avatar ${load ? "none" : ""}`}>
                     <div className="shimmer-wrapper">
