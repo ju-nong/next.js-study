@@ -5,11 +5,18 @@ import { colorChange } from "@/styles";
 
 const HeaderStyled = styled.header`
     width: 100%;
+    overflow: hidden;
+`;
+
+const MenuContainer = styled.div`
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
+    position: relative;
     justify-content: space-evenly;
     padding: 1rem;
 
-    & > a {
+    a {
         color: white;
         font-weight: bold;
         text-transform: capitalize;
@@ -23,13 +30,15 @@ function Header() {
 
     return (
         <HeaderStyled>
-            {menus.map((menu, index) => (
-                <Link href={menu} key={index}>
-                    {menu}
-                </Link>
-            ))}
+            <MenuContainer>
+                {menus.map((menu, index) => (
+                    <Link href={menu} key={index}>
+                        {menu}
+                    </Link>
+                ))}
+            </MenuContainer>
         </HeaderStyled>
     );
 }
 
-export { Header as default };
+export { Header };

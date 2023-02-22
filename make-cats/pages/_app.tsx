@@ -1,9 +1,8 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import wrapper from "@/store";
+import Layout from "./layout";
 import { Provider } from "react-redux";
-import axios from "axios";
-import { tagActions } from "@/store/tags/reducer";
 import { QueryClientProvider, QueryClient } from "react-query";
 
 const queryClient = new QueryClient();
@@ -14,7 +13,9 @@ function App({ Component, ...pageProps }: AppProps) {
     return (
         <QueryClientProvider client={queryClient}>
             <Provider store={store}>
-                <Component {...props.pageProps} />
+                <Layout>
+                    <Component {...props.pageProps} />
+                </Layout>
             </Provider>
         </QueryClientProvider>
     );
