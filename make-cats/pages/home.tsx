@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { bgChange, colorChange } from "@/styles";
 import axios from "axios";
+import { Darkmode } from "@/components/Darkmode";
 
 const HomeContainer = styled.main`
     max-width: 700px;
-    height: 80vh;
+    height: calc(100vh - 54px);
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -125,6 +126,7 @@ function Home() {
 
     return (
         <HomeContainer>
+            <Darkmode />
             <ProfileContainer>
                 <div className={`avatar ${load ? "none" : ""}`}>
                     <div className="shimmer-wrapper">
@@ -145,7 +147,6 @@ function Home() {
 
                 <ProfileLink onClick={handleLink}>Visit Github</ProfileLink>
             </ProfileContainer>
-            {/* <img src="https://cataas.com/cat" /> */}
         </HomeContainer>
     );
 }

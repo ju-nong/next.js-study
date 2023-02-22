@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
 import { colorChange } from "@/styles";
+import { MdToggleOff, MdToggleOn } from "react-icons/md";
 
 const HeaderStyled = styled.header`
     width: 100%;
@@ -25,8 +26,33 @@ const MenuContainer = styled.div`
     }
 `;
 
+const ModeMenuStyled = styled.div`
+    display: flex;
+    position: absolute;
+    gap: 0.5rem;
+    z-index: 100;
+    color: white;
+    right: 1rem;
+
+    & > * {
+        cursor: pointer;
+    }
+
+    button {
+        font-size: 1rem;
+        background: none;
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+    }
+`;
+
 function Header() {
     const menus = ["home", "tag", "gif", "says"];
+    const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
 
     return (
         <HeaderStyled>
@@ -36,6 +62,13 @@ function Header() {
                         {menu}
                     </Link>
                 ))}
+                <ModeMenuStyled>
+                    <button onClick={() => setIsDarkMode(false)}>🌞</button>
+                    <span onClick={() => setIsDarkMode((mode) => !mode)}>
+                        {isDarkMode ? <MdToggleOn /> : <MdToggleOff />}
+                    </span>
+                    <button onClick={() => setIsDarkMode(true)}>🌚</button>
+                </ModeMenuStyled>
             </MenuContainer>
         </HeaderStyled>
     );

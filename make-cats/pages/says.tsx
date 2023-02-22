@@ -5,7 +5,7 @@ import axios from "axios";
 import { AiOutlineLoading } from "react-icons/ai";
 
 const SayContainer = styled.div`
-    height: 80vh;
+    height: calc(100vh - 54px);
     display: flex;
     flex-direction: column;
     justify-content: center;
