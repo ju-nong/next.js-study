@@ -75,7 +75,7 @@ const InputStyled = styled.input`
 const InputGuideStyled = styled.p<GuideStyledProps>`
     margin-top: 1rem;
     text-align: center;
-    color: #666;
+    color: #a0abb8;
 
     font-size: ${(props) => `${props.fontSize}rem`};
 `;
