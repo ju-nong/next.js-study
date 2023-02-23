@@ -1,35 +1,83 @@
-import React, { ReactNode } from "react";
-import { Theme, ThemeProvider } from "@emotion/react";
-
-const themeConfg: Theme = {
-    white: {
-        color: {
-            base: "#000",
-            subBase: "#a0abb8",
-            noBase: "#fff",
-        },
-        // bgColor: "rgba(0, 0, 0, 0.8)",
-        // homeST: "rgba(255, 255, 255, 0.3)",
-        tagSkeletonColors: ["#656871", "#888b94", "#656871", "#656871"],
-    },
-    dark: {
-        color: {
-            base: "#fff",
-            subBase: "#a0abb8",
-            noBase: "#000",
-        },
-        // bgColor: "rgba(0, 0, 0, 0.8)",
-        // homeST: "rgba(255, 255, 255, 0.3)",
-        tagSkeletonColors: ["#656871", "#888b94", "#656871", "#656871"],
-    },
-};
+import React, {
+    ReactNode,
+    useReducer,
+    createContext,
+    Dispatch,
+    useContext,
+} from "react";
+import { ThemeProvider } from "@emotion/react";
 
 interface ThemeProps {
     children: ReactNode;
 }
 
-const Theme = ({ children }: ThemeProps) => (
-    <ThemeProvider theme={themeConfg}>{children}</ThemeProvider>
-);
+type State = boolean;
 
-export { Theme };
+type Action = { type: "CHANGE_THMEM" };
+
+type ThemeDispatch = Dispatch<Action>;
+
+const ThemeStateContext = createContext<State>(true);
+const ThemeDispatchContext = createContext<ThemeDispatch | null>(null);
+
+function reducer(state: State, action: Action): State {
+    switch (action.type) {
+        case "CHANGE_THMEM":
+            return !state;
+        default:
+            throw new Error("Unhandled action");
+    }
+}
+
+const themeConfg = {
+    white: {
+        color: {
+            base: "#fff",
+            subBase: "#a0abb8",
+            noBase: "#000",
+        },
+        tagSkeletonColors: ["#656871", "#888b94", "#656871", "#656871"],
+    },
+    dark: {
+        color: {
+            base: "#000",
+            subBase: "#a0abb8",
+            noBase: "#fff",
+        },
+        tagSkeletonColors: ["#656871", "#888b94", "#656871", "#656871"],
+    },
+};
+
+function Theme({ children }: ThemeProps) {
+    const [state, dispatch] = useReducer(reducer, true);
+
+    return (
+        <ThemeStateContext.Provider value={state}>
+            <ThemeDispatchContext.Provider value={dispatch}>
+                <ThemeProvider theme={themeConfg[state ? `dark` : `white`]}>
+                    {children}
+                </ThemeProvider>
+            </ThemeDispatchContext.Provider>
+        </ThemeStateContext.Provider>
+    );
+}
+
+function useThemeState() {
+    const state = useContext(ThemeStateContext);
+
+    if (!state) {
+        throw new Error("Theme State Context is null");
+    }
+
+    return state;
+}
+
+function useThemeDispatch() {
+    const dispatch = useContext(ThemeDispatchContext);
+
+    if (!dispatch) {
+        throw new Error("Theme Dispatch Context is null");
+    }
+}
+
+export { Theme, useThemeState, useThemeDispatch };
