@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { Body } from "@/components/semantic/Body";
 import { Header } from "@/components/semantic";
 
 interface LayoutProps {
@@ -7,10 +8,10 @@ interface LayoutProps {
 
 function layout({ children }: LayoutProps) {
     return (
-        <>
+        <Body>
             <Header />
             {children}
-        </>
+        </Body>
     );
 }
 

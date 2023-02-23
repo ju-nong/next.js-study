@@ -4,6 +4,7 @@ import wrapper from "@/store";
 import Layout from "./layout";
 import { Provider } from "react-redux";
 import { QueryClientProvider, QueryClient } from "react-query";
+import { Theme } from "@/styles/theme";
 
 const queryClient = new QueryClient();
 
@@ -13,9 +14,11 @@ function App({ Component, ...pageProps }: AppProps) {
     return (
         <QueryClientProvider client={queryClient}>
             <Provider store={store}>
-                <Layout>
-                    <Component {...props.pageProps} />
-                </Layout>
+                <Theme>
+                    <Layout>
+                        <Component {...props.pageProps} />
+                    </Layout>
+                </Theme>
             </Provider>
         </QueryClientProvider>
     );
