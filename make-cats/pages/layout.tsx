@@ -7,7 +7,7 @@ interface LayoutProps {
     children: ReactNode;
 }
 
-function layout({ children }: LayoutProps) {
+function Layout({ children }: LayoutProps) {
     const theme = useTheme();
 
     return (
@@ -35,4 +35,4 @@ function layout({ children }: LayoutProps) {
     );
 }
 
-export { layout as default };
+export { Layout as default };
