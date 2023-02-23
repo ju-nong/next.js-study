@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hind Siliguri", sans-serif;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+.none {
+    display: none;
+}
