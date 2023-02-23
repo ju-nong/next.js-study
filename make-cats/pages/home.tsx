@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import { bgChange, colorChange } from "@/styles";
 import axios from "axios";
+import { transparentize } from "polished";
+import { css } from "@emotion/react";
 
 const HomeContainer = styled.main`
     max-width: 700px;
-    height: calc(100vh - 54px);
+    height: calc(100vh - 69px);
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -31,7 +33,8 @@ const ProfileContainer = styled.div`
 
     & > .avatar {
         border-radius: 50%;
-        border: 2px solid rgba(255, 255, 255, 0.9);
+        border: 2px solid
+            ${({ theme }) => transparentize(0.1, theme.color.noBase)};
         max-width: 200px;
         max-height: 200px;
         width: 200px;
@@ -46,7 +49,7 @@ const ProfileContainer = styled.div`
     & > div.avatar {
         position: relative;
         overflow: hidden;
-        background: rgba(255, 255, 255, 0.3);
+        background: ${({ theme }) => transparentize(0.7, theme.color.noBase)};
 
         .shimmer-wrapper {
             position: absolute;
@@ -59,9 +62,11 @@ const ProfileContainer = styled.div`
             .shimmer {
                 width: 50%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.05);
+                background-color: ${({ theme }) =>
+                    transparentize(0.95, theme.color.base)};
                 transform: skewX(-20deg);
-                box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.05);
+                box-shadow: 0 0 30px 30px
+                    ${({ theme }) => transparentize(0.95, theme.color.base)};
             }
         }
     }
@@ -72,14 +77,18 @@ const NamesContainer = styled.div`
     cursor: pointer;
 
     & > h2 {
-        color: white;
         line-height: 1.25;
-        ${colorChange("white")}
+        ${({ theme }) => css`
+            color: ${theme.color.noBase};
+            ${colorChange(theme.color.noBase)}
+        `}
     }
 
     & > p {
-        color: #a0abb8;
-        ${colorChange("#a0abb8")}
+        ${({ theme }) => css`
+            color: ${theme.color.subBase};
+            ${colorChange(theme.color.subBase)}
+        `}
     }
 `;
 

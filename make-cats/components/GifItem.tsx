@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import axios from "axios";
+import { css } from "@emotion/react";
 
 const ItemStyled = styled.li`
     width: 35vmin;
@@ -31,14 +32,16 @@ const ItemStyled = styled.li`
         animation-iteration-count: infinite;
         animation-name: placeHolderShimmer;
         animation-timing-function: linear;
-        background: #656871;
-        background-image: linear-gradient(
-            to right,
-            #656871 0%,
-            #888b94 20%,
-            #656871 40%,
-            #656871 100%
-        );
+        ${({ theme }) => css`
+            background: ${theme.gifColors[0]};
+            background-image: linear-gradient(
+                to right,
+                ${theme.gifColors[0]} 0%,
+                ${theme.gifColors[1]} 20%,
+                ${theme.gifColors[0]} 40%,
+                ${theme.gifColors[0]} 100%
+            );
+        `}
         background-repeat: no-repeat;
         background-size: 600% 100%;
 

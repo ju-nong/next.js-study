@@ -1,11 +1,11 @@
 import React, { useState, useRef } from "react";
 import styled from "@emotion/styled";
-import css from "styled-jsx/css";
 import axios from "axios";
 import { AiOutlineLoading } from "react-icons/ai";
+import { css } from "@emotion/react";
 
 const SayContainer = styled.div`
-    height: calc(100vh - 54px);
+    height: calc(100vh - 69px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,7 +38,7 @@ const ImageStyled = styled.img`
 const ImageLoadingStyled = styled.div`
     font-size: 3rem;
     text-align: center;
-    color: #fff;
+    color: ${({ theme }) => theme.color.noBase};
 
     @keyframes spin {
         to {
@@ -70,12 +70,17 @@ const InputStyled = styled.input`
     width: 180px;
     padding: 0.75rem;
     border-radius: 1rem;
+    outline: none;
+    ${({ theme }) => css`
+        color: ${theme.color.base};
+        background-color: ${theme.color.noBase};
+    `}
 `;
 
 const InputGuideStyled = styled.p<GuideStyledProps>`
     margin-top: 1rem;
     text-align: center;
-    color: #a0abb8;
+    color: ${({ theme }) => theme.color.subBase};
 
     font-size: ${(props) => `${props.fontSize}rem`};
 `;

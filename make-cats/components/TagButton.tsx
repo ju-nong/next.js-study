@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { colorChange } from "@/styles";
+import { css } from "@emotion/react";
 
 interface TagButtonProps {
     text: string;
@@ -17,15 +18,19 @@ const TagButtonStyled = styled.label`
     }
 
     & > span {
-        color: #a0abb8;
+        ${({ theme }) => css`
+            color: ${theme.color.subBase};
+            ${colorChange(theme.color.subBase)};
+        `};
         cursor: pointer;
-        ${colorChange("#a0abb8")};
     }
 
     & > input:checked + span {
-        color: #fff;
         font-weight: bold;
-        ${colorChange("#fff")};
+        ${({ theme }) => css`
+            color: ${theme.color.noBase};
+            ${colorChange(theme.color.noBase)};
+        `};
     }
 `;
 

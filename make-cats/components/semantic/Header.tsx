@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
 import { colorChange } from "@/styles";
+import { useThemeState, useThemeDispatch } from "@/styles/theme";
 
 const HeaderStyled = styled.header`
     width: 100%;
@@ -14,14 +15,14 @@ const MenuContainer = styled.div`
     display: flex;
     position: relative;
     justify-content: space-evenly;
-    padding: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
 
     a {
-        color: white;
+        color: ${({ theme }) => theme.color.noBase};
         font-weight: bold;
         text-transform: capitalize;
 
-        ${colorChange("white")}
+        ${({ theme }) => colorChange(theme.color.noBase)}
     }
 `;
 
@@ -30,7 +31,6 @@ const ModeMenuStyled = styled.div`
     position: absolute;
     gap: 0.5rem;
     z-index: 100;
-    color: white;
     right: 1rem;
 
     & > * {
@@ -51,7 +51,11 @@ const ModeMenuStyled = styled.div`
 
 function Header() {
     const menus = ["home", "tag", "gif", "says"];
-    const [theme, setTheme] = useState<boolean>(true);
+
+    const theme = useThemeState();
+    const dispatch = useThemeDispatch();
+
+    const changeTheme = () => dispatch({ type: "CHANGE_THMEM" });
 
     return (
         <HeaderStyled>
@@ -62,9 +66,7 @@ function Header() {
                     </Link>
                 ))}
                 <ModeMenuStyled>
-                    <button onClick={() => setTheme((theme) => !theme)}>
-                        {theme ? `🌞` : `🌚`}
-                    </button>
+                    <button onClick={changeTheme}>{theme ? `🌚` : `🌞`}</button>
                 </ModeMenuStyled>
             </MenuContainer>
         </HeaderStyled>

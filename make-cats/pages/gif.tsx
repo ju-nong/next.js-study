@@ -19,7 +19,6 @@ const LoadingStyled = styled.li`
     flex: 0 0 100%;
     font-size: 3rem;
     text-align: center;
-    color: #fff;
 
     @keyframes spin {
         to {

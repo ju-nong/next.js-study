@@ -36,7 +36,7 @@ const themeConfg = {
             subBase: "#a0abb8",
             noBase: "#000",
         },
-        tagSkeletonColors: ["#656871", "#888b94", "#656871", "#656871"],
+        gifColors: ["#B9B9B9", "#D4D4D4"],
     },
     dark: {
         color: {
@@ -44,7 +44,7 @@ const themeConfg = {
             subBase: "#a0abb8",
             noBase: "#fff",
         },
-        tagSkeletonColors: ["#656871", "#888b94", "#656871", "#656871"],
+        gifColors: ["#656871", "#888b94"],
     },
 };
 
@@ -65,7 +65,7 @@ function Theme({ children }: ThemeProps) {
 function useThemeState() {
     const state = useContext(ThemeStateContext);
 
-    if (!state) {
+    if (typeof state !== "boolean") {
         throw new Error("Theme State Context is null");
     }
 
@@ -78,6 +78,8 @@ function useThemeDispatch() {
     if (!dispatch) {
         throw new Error("Theme Dispatch Context is null");
     }
+
+    return dispatch;
 }
 
 export { Theme, useThemeState, useThemeDispatch };

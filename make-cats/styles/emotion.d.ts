@@ -7,6 +7,6 @@ declare module "@emotion/react" {
             subBase: string;
             noBase: string;
         };
-        tagSkeletonColors: string[];
+        gifColors: string[];
     }
 }

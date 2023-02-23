@@ -9,8 +9,9 @@ import { TagButton } from "@/components/TagButton";
 import Flicking from "@egjs/react-flicking";
 import { Fade } from "@egjs/flicking-plugins";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
-
 import styled from "@emotion/styled";
+import { transparentize } from "polished";
+import { css } from "@emotion/react";
 
 const fetchData = async (): Promise<AxiosResponse<Tags>> =>
     axios.get("https://cataas.com/api/tags");
@@ -75,12 +76,16 @@ const Loading = styled.div`
         font-size: 10px;
         position: absolute;
         text-indent: -9999em;
-        border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-        border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-        border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-        border-left: 1.1em solid #ffffff;
         transform: translateZ(0);
         animation: load8 1.1s infinite linear;
+
+        ${({ theme }) => css`
+            border-top: 1.1em solid ${transparentize(0.8, theme.color.noBase)};
+            border-right: 1.1em solid ${transparentize(0.8, theme.color.noBase)};
+            border-bottom: 1.1em solid
+                ${transparentize(0.8, theme.color.noBase)};
+            border-left: 1.1em solid ${theme.color.noBase};
+        `}
     }
 
     @-webkit-keyframes load8 {
