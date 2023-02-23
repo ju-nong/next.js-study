@@ -35,6 +35,7 @@ const ProfileContainer = styled.div`
         border-radius: 50%;
         border: 2px solid
             ${({ theme }) => transparentize(0.1, theme.color.noBase)};
+        transition: border-color 0.5s;
         max-width: 200px;
         max-height: 200px;
         width: 200px;
@@ -50,6 +51,7 @@ const ProfileContainer = styled.div`
         position: relative;
         overflow: hidden;
         background: ${({ theme }) => transparentize(0.7, theme.color.noBase)};
+        transition: background 0.5s;
 
         .shimmer-wrapper {
             position: absolute;
@@ -67,6 +69,7 @@ const ProfileContainer = styled.div`
                 transform: skewX(-20deg);
                 box-shadow: 0 0 30px 30px
                     ${({ theme }) => transparentize(0.95, theme.color.base)};
+                transition: background 0.5s, box-shadow 0.5s;
             }
         }
     }
@@ -82,6 +85,7 @@ const NamesContainer = styled.div`
             color: ${theme.color.noBase};
             ${colorChange(theme.color.noBase)}
         `}
+        transition: color 0.5s;
     }
 
     & > p {
@@ -89,6 +93,7 @@ const NamesContainer = styled.div`
             color: ${theme.color.subBase};
             ${colorChange(theme.color.subBase)}
         `}
+        transition: color 0.5s;
     }
 `;
 
@@ -101,6 +106,7 @@ const ProfileLink = styled.button`
     cursor: pointer;
 
     ${bgChange("#f6f8fa")}
+    transition: background-color 0.5s;
 `;
 
 const BASE = "https://cataas.com";

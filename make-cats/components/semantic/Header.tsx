@@ -19,6 +19,7 @@ const MenuContainer = styled.div`
 
     a {
         color: ${({ theme }) => theme.color.noBase};
+        transition: color 0.5s;
         font-weight: bold;
         text-transform: capitalize;
 

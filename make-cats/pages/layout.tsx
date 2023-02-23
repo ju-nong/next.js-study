@@ -15,6 +15,7 @@ function Layout({ children }: LayoutProps) {
             <Global
                 styles={css`
                     body {
+                        transition: background-color 0.5s;
                         background-color: ${transparentize(
                             0.2,
                             theme.color.base,
@@ -22,6 +23,7 @@ function Layout({ children }: LayoutProps) {
                     }
 
                     *::-webkit-scrollbar-track {
+                        transition: background 0.5s;
                         background: ${transparentize(
                             0.8,
                             theme.color.base,

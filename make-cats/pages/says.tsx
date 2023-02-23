@@ -39,6 +39,7 @@ const ImageLoadingStyled = styled.div`
     font-size: 3rem;
     text-align: center;
     color: ${({ theme }) => theme.color.noBase};
+    transition: color 0.5s;
 
     @keyframes spin {
         to {
@@ -75,14 +76,15 @@ const InputStyled = styled.input`
         color: ${theme.color.base};
         background-color: ${theme.color.noBase};
     `}
+    transition: color 0.5s, background-color 0.5s;
 `;
 
 const InputGuideStyled = styled.p<GuideStyledProps>`
     margin-top: 1rem;
     text-align: center;
     color: ${({ theme }) => theme.color.subBase};
-
     font-size: ${(props) => `${props.fontSize}rem`};
+    transition: color 0.5s, font-size 0.5s;
 `;
 
 function Says() {

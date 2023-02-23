@@ -22,6 +22,7 @@ const TagButtonStyled = styled.label`
             color: ${theme.color.subBase};
             ${colorChange(theme.color.subBase)};
         `};
+        transition: color 0.5s;
         cursor: pointer;
     }
 
@@ -31,6 +32,7 @@ const TagButtonStyled = styled.label`
             color: ${theme.color.noBase};
             ${colorChange(theme.color.noBase)};
         `};
+        transition: color 0.5s;
     }
 `;
 

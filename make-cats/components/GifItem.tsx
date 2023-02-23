@@ -44,6 +44,7 @@ const ItemStyled = styled.li`
         `}
         background-repeat: no-repeat;
         background-size: 600% 100%;
+        transition: background 0.5s;
 
         width: 100%;
         height: 100%;
