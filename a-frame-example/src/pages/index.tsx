@@ -102,7 +102,7 @@ const Home: NextPage = () => {
                 wasdControls={{ fly: true, acceleration: 200 }}
             />
 
-            <GLTFModel id="model" src="sofa/sofa_03_4k.gltf" />
+            <GLTFModel id="model" src="/sofa/sofa_03_4k.gltf" />
 
             <Entity gltfModel="#model" />
 
