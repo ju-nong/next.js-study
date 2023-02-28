@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@belivvr/aframe-react": "^0.4.2",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@next/font": "13.2.1",
     "@types/node": "18.14.2",
     "@types/react": "18.0.28",

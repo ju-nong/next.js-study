@@ -1,0 +1,63 @@
+newmtl minecraft_concrete_white_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_white_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_sea_lantern_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/sea_lantern_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_concrete_black_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_black_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_planks_birch_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/planks_birch_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_concrete_green_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_green_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_glass_black_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/glass_black_-1.png
+Ns 100.0
+d 0.5
+newmtl minecraft_concrete_gray_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_gray_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_hardened_clay_stained_gray_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/hardened_clay_stained_gray_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_redstone_lamp_off_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/redstone_lamp_off_-1.png
+Ns 100.0
+d 1.0

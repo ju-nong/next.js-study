@@ -1,0 +1,70 @@
+newmtl minecraft_wool_colored_black_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/wool_colored_black_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_snow_-5613474
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/snow_-5613474.png
+Ns 100.0
+d 1.0
+newmtl minecraft_snow_-403285
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/snow_-403285.png
+Ns 100.0
+d 1.0
+newmtl minecraft_snow_-7171436
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/snow_-7171436.png
+Ns 100.0
+d 1.0
+newmtl minecraft_snow_-2645438
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/snow_-2645438.png
+Ns 100.0
+d 1.0
+newmtl minecraft_snow_-7574943
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/snow_-7574943.png
+Ns 100.0
+d 1.0
+newmtl littletiles_ltcolored0_-5613474
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/littletiles/ltcolored0_-5613474.png
+Ns 100.0
+d 1.0
+newmtl minecraft_snow_-15166887
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/snow_-15166887.png
+Ns 100.0
+d 1.0
+newmtl littletiles_ltcolored0_-14048406
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/littletiles/ltcolored0_-14048406.png
+Ns 100.0
+d 1.0
+newmtl littletiles_ltcolored0_-2645438
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/littletiles/ltcolored0_-2645438.png
+Ns 100.0
+d 1.0

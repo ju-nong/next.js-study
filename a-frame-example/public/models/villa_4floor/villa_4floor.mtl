@@ -1,0 +1,35 @@
+newmtl minecraft_concrete_silver_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_silver_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_concrete_black_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_black_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_glass_white_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/glass_white_-1.png
+Ns 100.0
+d 0.5
+newmtl minecraft_concrete_gray_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_gray_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_concrete_white_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_white_-1.png
+Ns 100.0
+d 1.0

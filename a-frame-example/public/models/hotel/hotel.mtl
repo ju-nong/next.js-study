@@ -1,0 +1,329 @@
+newmtl minecraft_dirt_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/dirt_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_grass_top_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/grass_top_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_grass_sideminecraft_grass_side_overlay_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/grass_sideminecraft_grass_side_overlay_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_hardened_clay_stained_white_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/hardened_clay_stained_white_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_glowstone_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/glowstone_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_concrete_silver_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_silver_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_concrete_blue_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_blue_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_stone_diorite_smooth_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/stone_diorite_smooth_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_glazed_terracotta_magenta_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/glazed_terracotta_magenta_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_glowstone_-47
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/glowstone_-47.png
+Ns 100.0
+d 1.0
+newmtl minecraft_glass_cyan_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/glass_cyan_-1.png
+Ns 100.0
+d 0.5
+newmtl minecraft_glass_black_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/glass_black_-1.png
+Ns 100.0
+d 0.5
+newmtl minecraft_gold_ore_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/gold_ore_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_glass_gray_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/glass_gray_-1.png
+Ns 100.0
+d 0.5
+newmtl minecraft_wool_colored_blue_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/wool_colored_blue_-1.png
+Ns 100.0
+d 1.0
+newmtl littletiles_ltcolored0_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/littletiles/ltcolored0_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_diamond_block_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/diamond_block_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_sponge_wet_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/sponge_wet_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_wool_colored_white_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/wool_colored_white_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_glazed_terracotta_black_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/glazed_terracotta_black_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_stone_diorite_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/stone_diorite_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_stone_andesite_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/stone_andesite_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_leaves_oak_extminecraft_leaves_oak_ext_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/leaves_oak_extminecraft_leaves_oak_ext_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_leaves_oak_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/leaves_oak_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_diamond_ore_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/diamond_ore_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_planks_big_oak_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/planks_big_oak_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_lapis_block_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/lapis_block_-1.png
+Ns 100.0
+d 1.0
+newmtl littletiles_ltcolored0_-16777216
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/littletiles/ltcolored0_-16777216.png
+Ns 100.0
+d 1.0
+newmtl minecraft_wool_colored_gray_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/wool_colored_gray_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_concrete_silver_-6052957
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_silver_-6052957.png
+Ns 100.0
+d 1.0
+newmtl minecraft_concrete_silver_-3223858
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_silver_-3223858.png
+Ns 100.0
+d 1.0
+newmtl minecraft_coal_block_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/coal_block_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_stone_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/stone_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_glass_white_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/glass_white_-1.png
+Ns 100.0
+d 0.5
+newmtl minecraft_stone_andesite_smooth_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/stone_andesite_smooth_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_concrete_powder_gray_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_powder_gray_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_log_oak_top_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/log_oak_top_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_log_oak_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/log_oak_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_gold_block_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/gold_block_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_leaves_oak_ext_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/leaves_oak_ext_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_concrete_red_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_red_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_wool_colored_yellow_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/wool_colored_yellow_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_diamond_ore_-65536
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/diamond_ore_-65536.png
+Ns 100.0
+d 1.0
+newmtl minecraft_glazed_terracotta_magenta_-7039852
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/glazed_terracotta_magenta_-7039852.png
+Ns 100.0
+d 1.0
+newmtl minecraft_wool_colored_red_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/wool_colored_red_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_gold_ore_-2829100
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/gold_ore_-2829100.png
+Ns 100.0
+d 1.0
+newmtl minecraft_gold_ore_-8224126
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/gold_ore_-8224126.png
+Ns 100.0
+d 1.0

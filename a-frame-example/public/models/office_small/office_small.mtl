@@ -1,0 +1,63 @@
+newmtl minecraft_concrete_white_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_white_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_hardened_clay_stained_gray_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/hardened_clay_stained_gray_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_stone_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/stone_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_concrete_green_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_green_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_sea_lantern_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/sea_lantern_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_prismarine_bricks_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/prismarine_bricks_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_stone_andesite_smooth_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/stone_andesite_smooth_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_concrete_silver_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/concrete_silver_-1.png
+Ns 100.0
+d 1.0
+newmtl minecraft_glass_brown_-1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+map_Kd textures/minecraft/glass_brown_-1.png
+Ns 100.0
+d 0.5
