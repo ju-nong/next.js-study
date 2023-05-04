@@ -20,7 +20,7 @@ export default function Document() {
                 ></meta>
                 <meta
                     content="https://make-cat.vercel.app"
-                    property="og:type"
+                    property="og:url"
                 ></meta>
                 <link rel="icon" href="/favicon.png"></link>
             </Head>
