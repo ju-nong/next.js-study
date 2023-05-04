@@ -12,7 +12,7 @@ export default function Document() {
                 <meta name="keywords" content="cat, Cat, CAT, 고양이"></meta>
                 <meta name="author" content="이준용"></meta>
                 <meta content="Make Cat" property="og:title"></meta>
-                <meta content="/favicon.jpg" property="og:image"></meta>
+                <meta content="/favicon.png" property="og:image"></meta>
                 <meta content="website" property="og:type"></meta>
                 <meta
                     content="make-cat.vercel.app"
