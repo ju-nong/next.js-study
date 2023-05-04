@@ -5,7 +5,7 @@ import { AiOutlineLoading } from "react-icons/ai";
 import { css } from "@emotion/react";
 
 const SayContainer = styled.div`
-    height: calc(100vh - 69px);
+    height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
     justify-content: center;

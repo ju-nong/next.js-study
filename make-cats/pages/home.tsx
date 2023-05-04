@@ -7,7 +7,7 @@ import { css } from "@emotion/react";
 
 const HomeContainer = styled.main`
     max-width: 700px;
-    height: calc(100vh - 69px);
+    height: calc(100vh - 70px);
     display: flex;
     margin: 0 auto;
     align-items: center;
