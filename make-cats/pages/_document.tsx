@@ -22,7 +22,7 @@ export default function Document() {
                     content="https://make-cat.vercel.app"
                     property="og:type"
                 ></meta>
-                <link rel="icon" href="/favicon.jpg"></link>
+                <link rel="icon" href="/favicon.png"></link>
             </Head>
             <body>
                 <Main />

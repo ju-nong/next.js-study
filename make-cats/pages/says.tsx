@@ -156,4 +156,4 @@ function Says() {
     );
 }
 
-export { Says as default };
+export { Says as default, SayContainer as BigImageContainer };
